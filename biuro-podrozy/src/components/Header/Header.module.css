@@ -1,0 +1,22 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200&family=Syncopate:wght@700&display=swap');
+
+.navbar {
+    padding: 0 10% 0 10%;
+    width: 60%;
+    height: 90px;
+    margin-left: auto;
+    margin-right: auto;
+    /* box-shadow: 0 0 10px 2px black; */
+    border-bottom: 1px solid gray;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: transparent;
+    color: white;
+}
+
+.logo {
+    font-family: 'Syncopate', sans-serif;
+    position: absolute;
+    left: 10%;
+}
