@@ -1,6 +1,10 @@
-.icon{
+.icon {
     height: 20px;
     position: absolute;
     top: 38px;
     right: 10%;
+}
+
+.icon:nth-child(1) {
+    margin-right: 30px;
 }

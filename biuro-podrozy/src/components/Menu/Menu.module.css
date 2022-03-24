@@ -8,8 +8,14 @@
 
 .item{
     display: inline-block;
+    font-family: 'Poppins', sans-serif;
 }
 
 .item:nth-child(2), .item:nth-child(3), .item:nth-child(4){
     margin-left: 4em;
+}
+
+a{
+    text-decoration: none;
+    color: white;
 }
