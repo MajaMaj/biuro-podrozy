@@ -1,0 +1,14 @@
+body {
+    background-color: black;
+}
+
+.main {
+    background-color: black;
+    margin-top: 30%;
+    padding-left: 10%;
+    padding-right: 10%;
+    height: 800px;
+    color: white;
+    text-align: center;
+    padding-top: 3em;
+}

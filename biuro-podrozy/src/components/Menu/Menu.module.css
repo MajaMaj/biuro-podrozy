@@ -1,21 +1,41 @@
-.containerMenu{
+.containerMenu {
     display: inline-block;
 }
 
-.list{
+.list {
     list-style: none;
 }
 
-.item{
+.item {
     display: inline-block;
     font-family: 'Poppins', sans-serif;
 }
 
-.item:nth-child(2), .item:nth-child(3), .item:nth-child(4){
+
+.item:nth-child(2), .item:nth-child(3), .item:nth-child(4) {
     margin-left: 4em;
 }
 
-a{
+a {
     text-decoration: none;
     color: white;
+}
+
+a:hover {
+    color: rgb(166, 166, 166);
+    animation: shadow 0.2s ease-out;
+    text-shadow: white 1px 0 7px;
+}
+
+@keyframes shadow {
+    0% {
+        color: white;
+        text-shadow: none;
+    }
+
+    100% {
+        color: rgb(166, 166, 166);
+        text-shadow: white 1px 0 5px;
+    }
+
 }

@@ -1,0 +1,15 @@
+.card {
+    width: 14em;
+    height: 5em;
+    justify-content:flex-start;
+}
+
+.container {
+    display: inline-block;
+    margin: 5%;
+}
+
+.par{
+    color: #9E9E9A;
+}
+

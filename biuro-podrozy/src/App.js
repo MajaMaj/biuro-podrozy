@@ -1,12 +1,23 @@
 import './App.css';
 import Header from './components/Header/Header';
 import Intro from './components/Intro/Intro';
+import Layout from './components/Layout/Layout';
+import Main from './components/Main/Main';
+import Menu from './components/Menu/Menu';
+
 
 function App() {
   return (
     <div>
+    <Layout
+    header={
       <Header></Header>
-      <Intro></Intro>
+    }
+    menu={<Menu></Menu>}
+    intro = {<Intro></Intro>}
+    content={<Main></Main>}
+
+    ></Layout>
     </div>
   );
 }
