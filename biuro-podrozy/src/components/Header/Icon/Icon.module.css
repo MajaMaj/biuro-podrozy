@@ -1,9 +1,35 @@
-.icon{
-    height: 20px;
+.icon {
+    font-size: 0.7em;
     position: absolute;
     top: 38px;
     right: 10%;
 }
-.icon:nth-child(1){
+
+.icon:nth-child(1) {
     margin-right: 30px;
+}
+
+.icon:hover {
+    color: #C5b29c;
+    animation: shadow 0.2s ease-out;
+    text-shadow: white 1px 0 7px;
+}
+
+@keyframes shadow {
+    0% {
+        color: white;
+        text-shadow: none;
+    }
+
+    100% {
+        color: #C5b29c;
+        text-shadow: white 1px 0 5px;
+    }
+
+}
+
+@media only screen and (max-width: 900px) {
+    .icon {
+        visibility: hidden;
+    }
 }

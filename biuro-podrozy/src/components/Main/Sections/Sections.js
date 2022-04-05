@@ -1,5 +1,5 @@
 import SectionWhy from "./SectionWhy/SectionWhy";
-import SectionGallery from "./SectionGallery.js/SectionGallery";
+import SectionGallery from "./SectionGallery/SectionGallery";
 
 function Sections(props) {
 

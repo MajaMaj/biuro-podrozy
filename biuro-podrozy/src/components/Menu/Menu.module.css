@@ -22,7 +22,7 @@ a {
 }
 
 a:hover {
-    color: rgb(166, 166, 166);
+    color: #C5b29c;
     animation: shadow 0.2s ease-out;
     text-shadow: white 1px 0 7px;
 }
@@ -34,8 +34,30 @@ a:hover {
     }
 
     100% {
-        color: rgb(166, 166, 166);
+        color: #C5b29c;
         text-shadow: white 1px 0 5px;
     }
 
+}
+
+.hamburger {
+    display: none;
+}
+
+@media only screen and (max-width: 900px) {
+    .hamburger {
+        display: block;
+        position: absolute;
+        right: 10%;
+        top: 1em;
+    }
+
+    .list {
+        visibility: hidden;
+    }
+}
+
+
+.arrow-closed {
+    color: red;
 }

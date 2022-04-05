@@ -1,0 +1,62 @@
+.card {
+    width: 70%;
+    height: 34em;
+    text-align: left;
+    position: absolute;
+    left: 50%;
+    transform: translate(-50%);
+    margin-top: 5em;
+    font-family: 'Poppins', sans-serif;
+    border: 1em solid #d8ab5b;
+}
+
+.imgCard {
+    width: calc(35% + 3em);
+    height: 40em;
+    overflow: hidden;
+    left: 50%;
+    margin-top: 3em;
+    position: absolute;
+
+}
+
+.img {
+    height: 40em;
+    filter: brightness(90%);
+}
+
+.describeCard {
+    width: 30%;
+    padding: 5% 7% 5% 7%;
+
+}
+
+.button {
+    width: 15em;
+    height: 3.5em;
+    font-weight: bolder;
+    font-family: 'Poppins', sans-serif;
+    border: none;
+    border-radius: 2em;
+    margin-top: 12em;
+    background-color: #d8ab5b;
+    box-shadow: 0px 0px 7px 1px #beab84;
+}
+
+.button:hover {
+    animation: shadow 0.3s ease-in-out;
+    background-color: #ae843c;
+    box-shadow: inset 0px 0px 10px 1px #000000, 0px 0px 13px 1px #b2996b;
+}
+
+@keyframes shadow {
+    0% {
+        background-color: #d8ab5b;
+        box-shadow: inset 0px 0px 0px 0px, 0px 0px 7px 1px #beab84;
+    }
+
+    100% {
+        background-color: #ae843c;
+        box-shadow: inset 0px 0px 10px 1px #000000, 0px 0px 13px 1px #b2996b;
+    }
+}

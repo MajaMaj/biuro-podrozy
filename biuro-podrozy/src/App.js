@@ -9,15 +9,15 @@ import Menu from './components/Menu/Menu';
 function App() {
   return (
     <div>
-    <Layout
-    header={
-      <Header></Header>
-    }
-    menu={<Menu></Menu>}
-    intro = {<Intro></Intro>}
-    content={<Main></Main>}
+      <Layout
+        header={
+          <Header></Header>
+        }
+        menu={<Menu></Menu>}
+        intro={<Intro></Intro>}
+        content={<Main></Main>}
 
-    ></Layout>
+      ></Layout>
     </div>
   );
 }

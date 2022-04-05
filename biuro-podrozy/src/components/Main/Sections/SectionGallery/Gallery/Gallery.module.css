@@ -1,0 +1,32 @@
+.icon {
+    position: absolute;
+    margin-top: 7em;
+    color: #ffe7bc;
+}
+
+.icon:hover {
+    color: #494949;
+    animation: change 0.2s ease-in;
+}
+
+.left {
+    left: 8%;
+}
+
+.right {
+    right: 8%;
+}
+
+@keyframes change {
+    0% {
+        color: #ffe7bc;
+    }
+
+    100% {
+        color: #494949;
+    }
+}
+
+.hidden {
+    display: none;
+}
