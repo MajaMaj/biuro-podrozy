@@ -12,13 +12,23 @@
 
 .introText {
     color: white;
+    align-items: center;
     font-size: 4em;
     font-family: 'Syncopate', sans-serif;
     text-align: center;
-    margin: 14% auto 0.3em auto;
-    border-bottom: 1px solid gray;
+    margin: 5em auto 0.3em auto;
     max-width: 12em;
     padding-bottom: 20px;
+}
+
+@media only screen and (max-width: 900px) {
+    .introText {
+        font-size: 3em;
+    }
+
+    .introPar {
+        margin: 0 10% 0 10%;
+    }
 }
 
 .introPar {

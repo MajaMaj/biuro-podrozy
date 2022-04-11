@@ -66,15 +66,19 @@ function Gallery() {
     }
 
     return (
-        <div>
-            {cards.map(card => {
-                return (
-                    <div key={card.id} className={(card.id === selectedOfert) ? "" : `${styles.hidden}`}>
-                        <GalleryCard {...card} />
-                    </div>
-                )
-            })}
-            <FontAwesomeIcon icon={faAngleLeft} className={`${styles.icon} ${styles.left}`} size="3x" onClick={prev}></FontAwesomeIcon>
+        <div style={{
+            minHeight: 800
+        }}>
+            {
+                cards.map(card => {
+                    return (
+                        <div key={card.id} className={(card.id === selectedOfert) ? "" : `${styles.hidden}`}>
+                            <GalleryCard {...card} />
+                        </div>
+                    )
+                })
+            }
+            <FontAwesomeIcon icon={faAngleLeft} className={`${styles.icon} ${styles.left}`} size="3x" onClick={prev} ></FontAwesomeIcon>
             <FontAwesomeIcon icon={faAngleRight} className={`${styles.icon} ${styles.right}`} size="3x" onClick={next}></FontAwesomeIcon>
         </div>
     )

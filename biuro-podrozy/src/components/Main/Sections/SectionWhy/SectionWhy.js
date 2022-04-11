@@ -1,10 +1,9 @@
-import styles from './SectionWhy.module.css';
 import WhyCards from './WhyCards/WhyCards';
-import {FontAwesomeIcon} from '@fortawesome/react-fontawesome';
-import {faCloud} from '@fortawesome/free-solid-svg-icons';
-import {faPlane} from '@fortawesome/free-solid-svg-icons';
-import {faMusic} from '@fortawesome/free-solid-svg-icons';
-import {faHeadphonesSimple} from '@fortawesome/free-solid-svg-icons';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faCloud } from '@fortawesome/free-solid-svg-icons';
+import { faPlane } from '@fortawesome/free-solid-svg-icons';
+import { faMusic } from '@fortawesome/free-solid-svg-icons';
+import { faHeadphonesSimple } from '@fortawesome/free-solid-svg-icons';
 
 function SectionWhy() {
 
@@ -36,7 +35,7 @@ function SectionWhy() {
     ]
 
     return (
-        <section className={styles.sec}>
+        <section>
             <h1 className="head">Why us</h1>
             {cards.map(card => <WhyCards key={card.id} {...card} />)}
         </section>

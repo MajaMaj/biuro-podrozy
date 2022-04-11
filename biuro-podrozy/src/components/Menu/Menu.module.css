@@ -1,7 +1,3 @@
-.containerMenu {
-    display: inline-block;
-}
-
 .list {
     list-style: none;
 }
@@ -21,10 +17,12 @@ a {
     color: white;
 }
 
-a:hover {
-    color: #C5b29c;
-    animation: shadow 0.2s ease-out;
-    text-shadow: white 1px 0 7px;
+@media only screen and (min-width: 900px) {
+    a:hover {
+        color: #C5b29c;
+        animation: shadow 0.2s ease-out;
+        text-shadow: white 1px 0 7px;
+    }
 }
 
 @keyframes shadow {
@@ -40,24 +38,187 @@ a:hover {
 
 }
 
-.hamburger {
-    display: none;
+
+.icon {
+    visibility: hidden;
+    position: absolute;
+    right: 10%;
+    top: 0.4em;
 }
 
 @media only screen and (max-width: 900px) {
+    .menu {
+        position: absolute;
+        overflow: hidden;
+        right: 0;
+        top: 0;
+        width: 100%;
+        height: 100vh;
+        background-color: #d8ab5b;
+        font-size: 1.3em;
+        z-index: 1;
+    }
+
+    .menu.deactivation {
+        animation: slideIn 0.5s ease-in;
+    }
+
+    @keyframes slideIn {
+        0% {
+            transform: translate(100%);
+        }
+
+        100% {
+            transform: translate(0);
+        }
+
+    }
+
+    .burger {
+        position: absolute;
+        width: 2em;
+        height: 3px;
+        background-color: white;
+        top: 1.4em;
+        right: 0;
+        border-radius: 20px;
+    }
+
+    .burger:before {
+        content: "";
+        position: absolute;
+        background-color: white;
+        width: 2em;
+        height: 3px;
+        bottom: 0.65em;
+        right: 0;
+        border-radius: 20px;
+    }
+
+    .burger:after {
+        content: "";
+        position: absolute;
+        background-color: white;
+        width: 2em;
+        height: 3px;
+        top: 0.6em;
+        right: 0;
+        border-radius: 20px;
+    }
+
+    .burgerBlock {
+        position: absolute;
+        z-index: 2;
+        width: 3em;
+        height: 3em;
+        top: 1em;
+        right: 10%;
+    }
+
+    .cross {
+        position: absolute;
+        z-index: 2;
+        width: 2em;
+        height: 3px;
+        top: 1.4em;
+        right: 0;
+        background-color: red;
+        transform: rotate(50deg);
+    }
+
+    .cross::before {
+        content: '';
+        position: absolute;
+        z-index: 2;
+        width: 2em;
+        height: 3px;
+        left: 2px;
+        background-color: blue;
+        transform: rotate(90deg);
+    }
+
+    .menu div {
+        width: 80%;
+        margin-left: 10%;
+        margin-top: 20%;
+    }
+
+    .active {
+        transform: translate(100%);
+    }
+
+    .animation {
+        animation: slide 0.5s ease-in;
+    }
+
+    .active div {
+        visibility: hidden;
+    }
+
+    @keyframes slide {
+        0% {
+            transform: translate(0);
+        }
+
+        100% {
+            transform: translate(100%);
+        }
+    }
+
+
     .hamburger {
         display: block;
         position: absolute;
         right: 10%;
-        top: 1em;
+        top: 0.7em;
+        z-index: 2;
     }
 
     .list {
-        visibility: hidden;
+        width: 80%;
     }
-}
+
+    .none {
+        display: none;
+    }
+
+    .item {
+        display: block;
+        border-bottom: 1px solid #fed892;
+    }
+
+    a {
+        font-weight: 600;
+
+    }
+
+    a:hover {
+        color: #b98a34;
+        animation: shadow2 0.3s ease-out;
+        text-shadow: white 1px 0 7px;
+    }
+
+    @keyframes shadow2 {
+        0% {
+            color: white;
+            text-shadow: none;
+        }
+
+        100% {
+            color: #b98a34;
+            text-shadow: white 1px 0 7px;
+        }
+
+    }
 
 
-.arrow-closed {
-    color: red;
+    .item:nth-child(2), .item:nth-child(3), .item:nth-child(4) {
+        margin-left: 0;
+    }
+
+    .icon {
+        visibility: visible;
+    }
+
+
 }

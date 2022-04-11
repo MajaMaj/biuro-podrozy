@@ -1,15 +1,27 @@
 import Menu from '../Menu/Menu';
 import styles from './Header.module.css';
-import Icon from './Icon/Icon';
+import { useEffect, useState } from 'react';
 
 function Header() {
-        return (
-            <div className={styles.navbar}>
-            <span className={styles.logo}>Travel</span>
-            <Menu></Menu>
-            <Icon></Icon>
+    const [navbar, setColor] = useState(false);
+    const [animation, setAnimation] = useState(false);
+
+    useEffect(() => {
+        window.addEventListener("scroll", () => {
+            setColor(window.scrollY > 30);
+        });
+        setAnimation(true);
+    }, []);
+
+    return (
+        <div className={navbar ? `${styles.navbar} ${styles.active}` : `${styles.navbar} ${animation ? `${styles.colorHide}` : ''}`}>
+            <div className={styles.nav}>
+                <span className={styles.logo}>Travel</span>
+                <Menu></Menu>
+
             </div>
-        );
+        </div>
+    );
 }
 
 export default Header;

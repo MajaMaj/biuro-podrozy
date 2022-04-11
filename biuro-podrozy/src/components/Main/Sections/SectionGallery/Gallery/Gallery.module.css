@@ -1,7 +1,7 @@
 .icon {
     position: absolute;
     margin-top: 7em;
-    color: #ffe7bc;
+    color: #fed892;
 }
 
 .icon:hover {
@@ -9,12 +9,29 @@
     animation: change 0.2s ease-in;
 }
 
+
 .left {
     left: 8%;
 }
 
 .right {
     right: 8%;
+}
+
+@media only screen and (max-width: 730px) {
+    .icon {
+        z-index: -1;
+        font-size: 1em;
+        margin-top: 25em;
+    }
+
+    .left {
+        left: 4%;
+    }
+
+    .right {
+        right: 4%;
+    }
 }
 
 @keyframes change {
