@@ -1,0 +1,58 @@
+.col {
+    padding: 0 5%;
+    text-align: center;
+    font-family: 'Poppins', sans-serif;
+}
+
+.colRight {
+    text-align: center;
+}
+
+@media only screen and (min-width: 730px) {
+    .row {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 0px 0px;
+    }
+
+    .col {
+        text-align: right;
+    }
+
+    .col:nth-child(2) {
+        margin-top: -1.4em;
+    }
+
+    .companies {
+        text-align: left;
+    }
+
+    .img {
+        height: 1.5em;
+        float: left;
+        filter: grayscale(100%);
+        margin-right: 3em;
+        margin-bottom: 2em;
+    }
+
+
+    .img:nth-child(7) {
+        height: 2em;
+    }
+
+    .img:hover {
+        filter: grayscale(0);
+        transition: filter 0.5s;
+    }
+}
+
+.sec {
+    margin-top: 8em;
+}
+
+.img {
+    height: 1.5em;
+    margin-right: 1.5em;
+    margin-left: 1.5em;
+    margin-bottom: 2em;
+}

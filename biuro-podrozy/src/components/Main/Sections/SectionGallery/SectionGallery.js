@@ -3,7 +3,7 @@ import Gallery from './Gallery/Gallery';
 
 function SectionGallery() {
     return (
-        <div className={styles.container}>
+        <div className={styles.container} id="gallery">
             <h1 className="head">Choose trip</h1>
             <Gallery></Gallery>
         </div>

@@ -1,7 +1,11 @@
+.container {
+    height: 35em;
+}
+
 .icon {
-    position: absolute;
-    margin-top: 7em;
     color: #fed892;
+    z-index: -1;
+    margin-top: -6.5em;
 }
 
 .icon:hover {
@@ -11,14 +15,19 @@
 
 
 .left {
-    left: 8%;
+    float: left;
 }
 
 .right {
-    right: 8%;
+    float: right;
 }
 
 @media only screen and (max-width: 730px) {
+
+    .container {
+        height: 40em;
+    }
+
     .icon {
         z-index: -1;
         font-size: 1em;
@@ -26,11 +35,11 @@
     }
 
     .left {
-        left: 4%;
+        left: 2%;
     }
 
     .right {
-        right: 4%;
+        margin-right: 2%;
     }
 }
 

@@ -12,6 +12,7 @@
     left: 50%;
     transform: translate(-50%);
     line-height: 4.5em;
+    z-index: 2;
 }
 
 .colorHide {
@@ -33,6 +34,28 @@
     animation: colorShow 0.5s ease-in;
 }
 
+@media only screen and (min-width: 900px) {
+    .active a:hover {
+        color: #ffd690;
+        animation: shadow 0.2s ease-out;
+        text-shadow: white 1px 0 7px;
+    }
+}
+
+@keyframes shadow {
+    0% {
+        color: white;
+        text-shadow: none;
+    }
+
+    100% {
+        color: #ffd690;
+        text-shadow: white 1px 0 5px;
+    }
+
+}
+
+
 @keyframes colorShow {
     0% {
         background-color: transparent;
@@ -47,6 +70,7 @@
     font-family: 'Syncopate', sans-serif;
     position: absolute;
     left: 10%;
+    z-index: -1;
 }
 
 .nav {

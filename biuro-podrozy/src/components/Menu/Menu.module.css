@@ -15,29 +15,14 @@
 a {
     text-decoration: none;
     color: white;
+    transition: color 0.3s;
 }
 
 @media only screen and (min-width: 900px) {
     a:hover {
         color: #C5b29c;
-        animation: shadow 0.2s ease-out;
-        text-shadow: white 1px 0 7px;
     }
 }
-
-@keyframes shadow {
-    0% {
-        color: white;
-        text-shadow: none;
-    }
-
-    100% {
-        color: #C5b29c;
-        text-shadow: white 1px 0 5px;
-    }
-
-}
-
 
 .icon {
     visibility: hidden;
@@ -46,109 +31,140 @@ a {
     top: 0.4em;
 }
 
+.burgerBlock input {
+    display: none;
+}
+
 @media only screen and (max-width: 900px) {
+
     .menu {
         position: absolute;
-        overflow: hidden;
-        right: 0;
-        top: 0;
-        width: 100%;
-        height: 100vh;
-        background-color: #d8ab5b;
+        top: 1.6em;
+        right: 13%;
+        background-color: #1c1c1c;
         font-size: 1.3em;
-        z-index: 1;
+        z-index: 0;
+        border-radius: 100%;
     }
 
     .menu.deactivation {
-        animation: slideIn 0.5s ease-in;
+        animation: slideIn 0.3s ease-in;
+        height: 200vh;
+        width: 250vh;
+        border-radius: 0;
+        top: -100vh;
+        right: -100vh;
     }
 
     @keyframes slideIn {
         0% {
-            transform: translate(100%);
+            height: 0;
+            width: 0;
+            border-radius: 100%;
+            top: 1.5em;
+            right: 15%;
         }
 
         100% {
-            transform: translate(0);
+            height: 200vh;
+            width: 250vh;
+            border-radius: 0;
+            top: -100vh;
+            right: -100vh;
         }
 
     }
 
-    .burger {
-        position: absolute;
-        width: 2em;
-        height: 3px;
-        background-color: white;
-        top: 1.4em;
-        right: 0;
-        border-radius: 20px;
-    }
-
-    .burger:before {
-        content: "";
-        position: absolute;
-        background-color: white;
-        width: 2em;
-        height: 3px;
-        bottom: 0.65em;
-        right: 0;
-        border-radius: 20px;
-    }
-
-    .burger:after {
-        content: "";
-        position: absolute;
-        background-color: white;
-        width: 2em;
-        height: 3px;
-        top: 0.6em;
-        right: 0;
-        border-radius: 20px;
-    }
 
     .burgerBlock {
         position: absolute;
         z-index: 2;
-        width: 3em;
-        height: 3em;
+        width: 2em;
+        height: 2em;
         top: 1em;
         right: 10%;
     }
 
-    .cross {
+    .burgerBlock input {
         position: absolute;
-        z-index: 2;
-        width: 2em;
-        height: 3px;
-        top: 1.4em;
+        display: block;
+        z-index: 3;
+        width: 2.6em;
+        height: 2.6em;
+        margin: 0;
         right: 0;
-        background-color: red;
-        transform: rotate(50deg);
+        z-index: 5;
+        opacity: 0;
+        cursor: pointer;
     }
 
-    .cross::before {
-        content: '';
-        position: absolute;
-        z-index: 2;
-        width: 2em;
-        height: 3px;
-        left: 2px;
-        background-color: blue;
-        transform: rotate(90deg);
+    .burger:before,
+    .burger:after,
+    .burger div {
+        background: #fff;
+        content: "";
+        display: block;
+        border-radius: 3px;
+        margin: 6.5px 0;
+        height: 4px;
+        width: 100%;
+        transition: transform 0.4s ease-in-out;
+    }
+
+    .burger::before {
+        transform-origin: 0% 0%;
+        transition: transform 0.4s ease-in-out, ;
+    }
+
+    .burger div {
+        transition: transform 0.2s ease-in-out;
+    }
+
+    .burger:after {
+        transform-origin: 0% 100%;
+        transition: transform 0.4s ease-in-out;
+    }
+
+    .burgerBlock input:checked~.burger::before {
+        transform: rotate(45deg);
+    }
+
+    .burgerBlock input:checked~.burger div {
+        transform: scaleY(0);
+    }
+
+    .burgerBlock input:checked~.burger:after {
+        transform: rotate(-45deg);
     }
 
     .menu div {
-        width: 80%;
-        margin-left: 10%;
-        margin-top: 20%;
+        position: fixed;
+        z-index: 4;
+        top: 20vh;
+        left: 50%;
+        transform: translate(-50%);
+        opacity: 0;
     }
+
+    .menu.deactivation div {
+        opacity: 1;
+        transition: opacity 0.6s ease-in;
+        transition-delay: 0.3s;
+    }
+
+
+    /* .list:nth-child(1) {
+        opacity: 1;
+        transition: opacity 0.6s ease-in;
+        transition-delay: 0.3s;
+    } */
 
     .active {
         transform: translate(100%);
     }
 
     .animation {
-        animation: slide 0.5s ease-in;
+        animation: slide .5s ease-in;
     }
 
     .active div {
@@ -157,25 +173,18 @@ a {
 
     @keyframes slide {
         0% {
-            transform: translate(0);
+            height: 200vh;
+            width: 200vh;
+            top: -100vh;
+            right: 100vh;
         }
 
         100% {
-            transform: translate(100%);
+            height: 0;
+            width: 0;
+            top: 1.6em;
+            right: 14%;
         }
-    }
-
-
-    .hamburger {
-        display: block;
-        position: absolute;
-        right: 10%;
-        top: 0.7em;
-        z-index: 2;
-    }
-
-    .list {
-        width: 80%;
     }
 
     .none {
@@ -184,7 +193,12 @@ a {
 
     .item {
         display: block;
-        border-bottom: 1px solid #fed892;
+    }
+
+    .item:nth-child(2) {
+        opacity: 1;
+        transition: opacity 0.8s ease-in;
+        transition-delay: 0.3s;
     }
 
     a {
@@ -192,33 +206,8 @@ a {
 
     }
 
-    a:hover {
-        color: #b98a34;
-        animation: shadow2 0.3s ease-out;
-        text-shadow: white 1px 0 7px;
-    }
-
-    @keyframes shadow2 {
-        0% {
-            color: white;
-            text-shadow: none;
-        }
-
-        100% {
-            color: #b98a34;
-            text-shadow: white 1px 0 7px;
-        }
-
-    }
-
-
     .item:nth-child(2), .item:nth-child(3), .item:nth-child(4) {
         margin-left: 0;
     }
-
-    .icon {
-        visibility: visible;
-    }
-
 
 }

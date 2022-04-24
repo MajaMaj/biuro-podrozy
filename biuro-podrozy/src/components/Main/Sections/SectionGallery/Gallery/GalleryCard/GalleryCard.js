@@ -13,7 +13,7 @@ function GalleryCard(props) {
                     <h2>{props.name}</h2>
                     <p>{props.describe}</p>
                     <p>{props.price}</p>
-                    <button className={styles.button}>Read more...</button>
+                    <button className="button">Read more...</button>
                 </div>
             </div>
         </div>

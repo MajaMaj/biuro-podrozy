@@ -3,17 +3,16 @@ body {
 }
 
 .main {
-    background-color: black;
     margin-top: 30%;
     padding-left: 10%;
     padding-right: 10%;
-    height: 800px;
+    height: 0;
     color: white;
     text-align: center;
 }
 
 @media only screen and (max-width: 1500px) {
     .main {
-        margin-top: 70vh;
+        margin-top: 65vh;
     }
 }

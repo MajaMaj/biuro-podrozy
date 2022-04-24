@@ -66,9 +66,7 @@ function Gallery() {
     }
 
     return (
-        <div style={{
-            minHeight: 800
-        }}>
+        <div className={styles.container}>
             {
                 cards.map(card => {
                     return (

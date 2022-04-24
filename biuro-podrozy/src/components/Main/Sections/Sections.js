@@ -1,5 +1,7 @@
 import SectionWhy from "./SectionWhy/SectionWhy";
 import SectionGallery from "./SectionGallery/SectionGallery";
+import SectionAbousUs from "./SectionAboutUs/SectionAboutUs";
+import SectionContact from "./SectionContact/SectionContact";
 
 function Sections(props) {
 
@@ -7,6 +9,8 @@ function Sections(props) {
         <div>
             <SectionWhy></SectionWhy>
             <SectionGallery></SectionGallery>
+            <SectionAbousUs></SectionAbousUs>
+            <SectionContact></SectionContact>
         </div>
     );
 }
